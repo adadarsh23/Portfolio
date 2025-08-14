@@ -20,7 +20,7 @@
 
   <meta property="og:image" content="/web-app-manifest-512x512.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com">
+  <meta property="og:url" content="https://adadarsh23.github.io/Adarsh-Kumar-Portfolio/">
 
 
   <!-- Twitter Card (Social Sharing) -->
@@ -841,7 +841,8 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn g-recaptcha" data-sitekey="6LdjZKYrAAAAAIGNPrjca75nIzFrp3Ep7-GWjgUM"
+              data-callback="onSubmit" data-action="submit">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
@@ -852,32 +853,8 @@
   </main>
 
   <script src="main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-      const messageBox = document.getElementById("formMessage");
-
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Stop default redirect
-
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          form.reset();
-          messageBox.style.display = "block"; // Show success message
-        } else {
-          messageBox.style.display = "block";
-          messageBox.style.color = "red";
-          messageBox.textContent = "❌ Something went wrong. Please try again.";
-        }
-      });
-    });
-  </script>
+  <script src="script.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
