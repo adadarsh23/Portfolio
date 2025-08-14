@@ -817,34 +817,32 @@
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
-
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223978.8013717946!2d77.23021282089897!3d28.69955329823253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1bb41c50fdf%3A0xe6f06fd26a7798ba!2sGhaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1755196411351!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54005895008!2d77.04416953544711!3d28.52725273407388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1755208615773!5m2!1sen!2sin"
               width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </figure>
         </section>
-
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-          <!-- Custom message -->
-          <p id="formMessage">
-            ✅ Thank you! Your message has been sent.
-          </p>
-          <form id="contactForm" action="https://formspree.io/f/xvgqyqwd" class="form" method="POST" data-form>
+          <p id="formMessage"></p>
+          <form id="contactForm" action="https://formspree.io/f/xvgqyqwd" method="POST" class="form" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
               <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message" required
+              data-form-input=""></textarea>
 
-            <button class="form-btn g-recaptcha" data-sitekey="6LdjZKYrAAAAAIGNPrjca75nIzFrp3Ep7-GWjgUM"
-              data-callback="onSubmit" data-action="submit">
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane-outline" class="send-icon"></ion-icon>
+              <span class="send-text">Send Message</span>
+              <span class="loading-spinner" style="display:none;">
+                <ion-icon name="sync-outline" class="spin"></ion-icon>
+              </span>
             </button>
           </form>
         </section>
@@ -854,7 +852,6 @@
 
   <script src="main.js"></script>
   <script src="script.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
