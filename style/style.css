@@ -1792,3 +1792,12 @@ textarea.form-input::-webkit-realizer {
     transform: rotate(360deg);
   }
 }
+
+#randomPhoto{
+  border-radius: 20%;
+  overflow: hidden;
+}
+#avatar-3d-container:hover {
+  transform: scale(1.05);
+}
+
