@@ -8,32 +8,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
+
+    // Check network status first
+    if (!navigator.onLine) {
+      showMessage("📴 You are offline. Please check your internet connection.", "red");
+      return;
+    }
+
     messageBox.style.display = "none";
-    
+
     // Show loading state
     sendText.style.display = 'none';
     sendIcon.style.display = 'none';
     loadingSpinner.style.display = 'inline-block';
     submitButton.disabled = true;
 
-    // 📦 Create a structured object to hold all data
     const submissionData = {};
     const formData = new FormData(form);
 
-    // 📋 Populate with form data
+    // Populate form data
     for (const [key, value] of formData.entries()) {
       submissionData[key] = value;
     }
 
-    try {
-      // 🌐 Fetch IP and location data
-      const ipResponse = await fetch("http://ip-api.com/json");
-      const ipData = await ipResponse.json();
+    // Collect device/browser info
+    submissionData.device_info = {
+      userAgent: navigator.userAgent,
+      platform: navigator.platform,
+      language: navigator.language,
+      screen: {
+        width: screen.width,
+        height: screen.height,
+        availWidth: screen.availWidth,
+        availHeight: screen.availHeight,
+      },
+      viewport: {
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }
+    };
 
-      // 🌍 Append IP/location data to the submission object
+    try {
+      // Fetch IP and location (HTTPS for mobile safety)
+      const ipResponse = await fetch("https://ipapi.co/json/");
+      const ipData = await ipResponse.json();
       submissionData.ip_info = ipData;
 
-      // 🚀 Submit the combined data as JSON
+      // Submit combined data
       const response = await fetch(form.action, {
         method: "POST",
         headers: {
@@ -47,13 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
         form.reset();
         showMessage("✅ Thank you! Your message has been sent.", "green");
       } else {
-        const errorData = await response.json();
+        const errorData = await response.json().catch(() => ({}));
         showMessage(`❌ Failed to send: ${errorData.message || "Please try again."}`, "red");
       }
     } catch (error) {
       showMessage("⚠️ Network error. Please try again.", "red");
     } finally {
-      // Reset button to its original state
+      // Reset button
       sendText.style.display = 'inline-block';
       sendIcon.style.display = 'inline-block';
       loadingSpinner.style.display = 'none';
@@ -61,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // 📢 Show message function
   function showMessage(text, color) {
     messageBox.textContent = text;
     messageBox.style.color = color;
