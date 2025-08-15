@@ -63,17 +63,30 @@ for(let i = 0; i < selectItems.length; i++) {
 
 const filterItems = document.querySelectorAll('[data-filter-item]');
 
+// const filterFunc = function (selectedValue) {
+//     for(let i = 0; i < filterItems.length; i++) {
+//         if(selectedValue == "all") {
+//             filterItems[i].classList.add('active');
+//         } else if (selectedValue == filterItems[i].dataset.category) {
+//             filterItems[i].classList.add('active');
+//         } else {
+//             filterItems[i].classList.remove('active');
+//         }
+//     }
+// }
+
 const filterFunc = function (selectedValue) {
-    for(let i = 0; i < filterItems.length; i++) {
-        if(selectedValue == "all") {
-            filterItems[i].classList.add('active');
-        } else if (selectedValue == filterItems[i].dataset.category) {
-            filterItems[i].classList.add('active');
-        } else {
-            filterItems[i].classList.remove('active');
-        }
+  for (let i = 0; i < filterItems.length; i++) {
+    const itemCategory = filterItems[i].dataset.category.toLowerCase();
+
+    if (selectedValue === "all" || selectedValue === itemCategory) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
     }
-}
+  }
+};
+
 
 //Enabling filter button for larger screens 
 
@@ -130,3 +143,7 @@ for(let i = 0; i < navigationLinks.length; i++) {
         }
     });
 }
+
+// Set default filter
+filterFunc("all");
+selectValue.innerText = "All";
