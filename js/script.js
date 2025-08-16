@@ -6,6 +6,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadingSpinner = submitButton.querySelector('.loading-spinner');
   const sendIcon = submitButton.querySelector('.send-icon');
 
+  // Multiple IP API fetcher
+  async function fetchAllIPInfo() {
+    const sources = [
+      "https://ipapi.co/json/",
+      "https://ipinfo.io/json?token=YOUR_IPINFO_TOKEN", // replace with your token
+      "https://ipwho.is/",
+      "http://ip-api.com/json/?fields=66846719"
+    ];
+
+    const results = {};
+    for (const url of sources) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) continue;
+        const data = await res.json();
+        results[url] = data;
+      } catch {
+        results[url] = { error: "Failed to fetch" };
+      }
+    }
+
+    return {
+      ipapi: results["https://ipapi.co/json/"] || {},
+      ipinfo: results["https://ipinfo.io/json?token=YOUR_IPINFO_TOKEN"] || {},
+      ipwhois: results["https://ipwho.is/"] || {},
+      ipapi_com: results["http://ip-api.com/json/?fields=66846719"] || {}
+    };
+  }
+
   form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -26,9 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submissionData[key] = value;
     }
 
-    // Collect detailed device & browser info
     submissionData.device_info = {
-      // Browser & OS
       userAgent: navigator.userAgent,
       userAgentData: navigator.userAgentData ? navigator.userAgentData.toJSON() : null,
       appVersion: navigator.appVersion,
@@ -44,8 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
       online: navigator.onLine,
       referrer: document.referrer,
       pageURL: location.href,
-
-      // Screen
       screen: {
         width: screen.width,
         height: screen.height,
@@ -57,48 +82,34 @@ document.addEventListener("DOMContentLoaded", function () {
         refreshRate: await getRefreshRate(),
         isTouchDevice: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
       },
-
-      // Viewport
       viewport: {
         width: window.innerWidth,
         height: window.innerHeight,
         devicePixelRatio: window.devicePixelRatio
       },
-
-      // Network Info
       network: navigator.connection ? {
         effectiveType: navigator.connection.effectiveType,
         downlink: navigator.connection.downlink,
         rtt: navigator.connection.rtt,
         saveData: navigator.connection.saveData
       } : "Not supported",
-
-      // Storage Info
       storage: navigator.storage && navigator.storage.estimate ? await navigator.storage.estimate().then(estimate => ({
         quota: estimate.quota,
         usage: estimate.usage
       })) : "Not supported",
-
-      // Battery Info
       battery: navigator.getBattery ? await navigator.getBattery().then(battery => ({
         charging: battery.charging,
         level: battery.level,
         chargingTime: battery.chargingTime,
         dischargingTime: battery.dischargingTime
       })) : "Not supported",
-
-      // GPU Info
       gpu: getWebGLInfo(),
-
-      // Media Devices
       mediaDevices: navigator.mediaDevices && navigator.mediaDevices.enumerateDevices ?
         await navigator.mediaDevices.enumerateDevices().then(devices => devices.map(d => ({
           kind: d.kind,
           label: d.label || "N/A",
           deviceId: d.deviceId
         }))) : "Not supported",
-
-      // Browser Feature Detection
       features: {
         serviceWorker: 'serviceWorker' in navigator,
         localStorage: 'localStorage' in window,
@@ -108,27 +119,17 @@ document.addEventListener("DOMContentLoaded", function () {
         notifications: 'Notification' in window,
         webGL: 'WebGLRenderingContext' in window
       },
-      
-      // Fingerprinting
       fingerprint: {
         canvasHash: getCanvasFingerprint(),
-        audioHash: getAudioFingerprint(),
+        audioHash: await getAudioFingerprint(),
       },
-
-      // Incognito detection
       incognito: await isIncognitoMode(),
-
-      // Mini network speed test
       speedTest: await miniSpeedTest()
     };
 
     try {
-      // Get public IP & location
-      const ipResponse = await fetch("https://ipapi.co/json/");
-      const ipData = await ipResponse.json();
-      submissionData.ip_info = ipData;
+      submissionData.ip_info = await fetchAllIPInfo();
 
-      // Submit
       const response = await fetch(form.action, {
         method: "POST",
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
@@ -158,7 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
     messageBox.style.display = "block";
   }
 
-  // Detect incognito
   async function isIncognitoMode() {
     return new Promise(resolve => {
       const fs = window.RequestFileSystem || window.webkitRequestFileSystem;
@@ -170,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Estimate refresh rate
   async function getRefreshRate() {
     return new Promise(resolve => {
       let start = performance.now();
@@ -181,13 +180,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Mini speed test
   async function miniSpeedTest() {
     const imageUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg";
     const startTime = performance.now();
     try {
       const response = await fetch(imageUrl + "?cache=" + Math.random(), { cache: "no-store" });
-      const blob = await await response.blob();
+      const blob = await response.blob();
       const endTime = performance.now();
       const sizeMB = blob.size / (1024 * 1024);
       const speedMbps = (sizeMB / ((endTime - startTime) / 1000)) * 8;
@@ -196,8 +194,44 @@ document.addEventListener("DOMContentLoaded", function () {
       return "Speed test failed";
     }
   }
+  async function getFullIPDetails() {
+    try {
+      // Get primary IP details
+      const res = await fetch("http://ip-api.com/json/?fields=status,message,query,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as", { cache: "no-store" });
+      const data = await res.json();
 
-  // Advanced GPU Info
+      // Create structured object
+      return {
+        ip_address: data.query || null,
+        ip_as: data.as || null,
+        ip_city: data.city || null,
+        ip_country: data.country || null,
+        ip_countryCode: data.countryCode || null,
+        ip_info: data, // full raw data for reference
+        ip_isp: data.isp || null,
+        ip_lat: data.lat || null,
+        ip_lon: data.lon || null,
+        ip_org: data.org || null,
+        ip_query: data.query || null,
+        ip_region: data.region || null,
+        ip_regionName: data.regionName || null,
+        ip_status: data.status || null,
+        ip_timezone: data.timezone || null,
+        ip_zip: data.zip || null
+      };
+    } catch (err) {
+      console.error("Failed to fetch IP details:", err);
+      return null;
+    }
+  }
+
+  // Example usage:
+  (async () => {
+    const ipDetails = await getFullIPDetails();
+    console.log(ipDetails);
+  })();
+
+
   function getWebGLInfo() {
     try {
       const canvas = document.createElement('canvas');
@@ -215,8 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return "Error retrieving GPU info";
     }
   }
-  
-  // Canvas Fingerprinting
+
   function getCanvasFingerprint() {
     try {
       const canvas = document.createElement('canvas');
@@ -237,8 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Audio Fingerprinting
-  function getAudioFingerprint() {
+  async function getAudioFingerprint() {
     try {
       const context = new (window.OfflineAudioContext || window.webkitOfflineAudioContext)(1, 44100, 44100);
       const oscillator = context.createOscillator();
@@ -253,14 +285,12 @@ document.addEventListener("DOMContentLoaded", function () {
       oscillator.connect(compressor);
       compressor.connect(context.destination);
       oscillator.start(0);
-      const fingerprint = context.startRendering();
-      return fingerprint.then(buffer => {
-        let hash = 0;
-        for (let i = 0; i < buffer.getChannelData(0).length; i++) {
-          hash += Math.abs(buffer.getChannelData(0)[i]);
-        }
-        return hash;
-      });
+      const buffer = await context.startRendering();
+      let hash = 0;
+      for (let i = 0; i < buffer.getChannelData(0).length; i++) {
+        hash += Math.abs(buffer.getChannelData(0)[i]);
+      }
+      return hash;
     } catch (e) {
       return "Audio fingerprint failed";
     }
