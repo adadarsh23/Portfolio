@@ -1824,7 +1824,7 @@ textarea.form-input::-webkit-realizer {
 
 .avatar-full-modal .modal-close-btn:hover,
 .avatar-full-modal .modal-close-btn:focus {
-  background: rgb(228, 10, 10);
+  background: hsl(45, 83%, 45%);
   color: var(--white2);
 }
 
