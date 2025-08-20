@@ -50,6 +50,7 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
+![Cursor](https://img.shields.io/badge/Cursor-000000?style=flat&logo=cursor&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat&logo=ollama&logoColor=white)
 
 ### Deployment & CI/CD
@@ -68,6 +69,7 @@
 |------------------|--------------------------------------------|---------------------------------------------|--------------------------------------------------------|
 | **Photo Gallery**| View, search, and share beautiful images.  | [Live](https://photogallery99.netlify.app/) | [GitHub](https://github.com/adadarsh23/Photo-Gallery) |
 | **Text App**     | Feature-rich online text editor.           | [Live](https://textapp23.netlify.app/)      | [GitHub](https://github.com/adadarsh23/Text-App-)     |
+| **Artist Website**       | A music artist site (songs, beats, albums, events).| [Live](https://artistsad.netlify.app/)|[GitHub](https://github.com/adadarsh23/Artist-website)|
 | **Dashboard**    | Real-time analytics and live widgets.      | [Live](https://ninenine99.netlify.app/)     | [GitHub](https://github.com/adadarsh23/NineNine)      |
 | **SpeedTest**    | Internet speed test with ping and latency. | [Live](https://speedtest23.netlify.app/)    | [GitHub](https://github.com/adadarsh23/SpeedTest)     |
 | **Book**         | List of the Book.                          | [Live](https://adadarsh23.github.io/Book-Project/)| [GitHub](https://github.com/adadarsh23/Book-Project) |
@@ -222,10 +224,15 @@
   <a href="https://github.com/adadarsh23?tab=followers" target="_blank">
     <img src="https://img.shields.io/github/followers/adadarsh23?label=Followers&style=social" alt="GitHub Followers" title="GitHub Followers"/>
   </a>
-<br/><br/>
+  <br/><br/>
   <a href="https://adadarsh23.github.io/Portfolio/" target="_blank">
     My PortFolio
   </a> 
+  <br/>
+  <a href="https://artistsad.netlify.app/" target="_blank">
+   Artist Website
+  </a> 
+
 </div>
 
 
