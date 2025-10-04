@@ -7,6 +7,14 @@
   box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #FFD700 rgba(255, 215, 0, 0.1);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -598,7 +606,7 @@ h1 {
   font-size: 1.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 10;
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -650,11 +658,22 @@ h1 {
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
+   html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative; /* avoids iOS rubber-banding side shift */
+  }
+  
+
   h1 {
     font-size: 2.5rem;
   }
 
   .subtitle {
+    font-size: 2rem;
+  }
+
+  .card-title {
     font-size: 1.2rem;
   }
 
@@ -733,6 +752,9 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    html, body {
+    overflow-x: hidden;
+  }
   .box-wrapper {
     min-height: 400px;
   }

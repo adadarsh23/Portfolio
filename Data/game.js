@@ -47,5 +47,12 @@ const games = [
     name: 'Âd Adarsh',
     gameId: 'ÂdAdarsh#523',
     image: 'https://cmsassets.rgpub.io/sanity/images/dsfx7636/riotbar_live/5de7cead6c63d6543c127be2829df3cc6473dd03-660x428.jpg'
+  },
+  {
+    id: "Asphalt-8",
+    title: "Asphalt 8",
+    name: "Âd Adarsh",
+    gameId: "Âd Adarsh#523",
+    image: "https://cdn.wallpapersafari.com/95/37/hCavXf.jpg"
   }
 ];
