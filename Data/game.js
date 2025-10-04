@@ -52,7 +52,7 @@ const games = [
     id: "Asphalt-8",
     title: "Asphalt 8",
     name: "Âd Adarsh",
-    gameId: "Âd Adarsh#523",
+    gameId: "adadarsh23",
     image: "https://cdn.wallpapersafari.com/95/37/hCavXf.jpg"
   }
 ];
