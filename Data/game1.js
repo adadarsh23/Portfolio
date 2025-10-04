@@ -1,7 +1,7 @@
 const games1 = [
   {
     id: "google-play",
-    platform: "Google Play Games",
+    platform: "Google Play",
     profileName: "ÂdAdarsh",
     profileId: "adadarsh23",
     url: "https://games.app.goo.gl/mApBVvgLaC7F6Ksx8",
