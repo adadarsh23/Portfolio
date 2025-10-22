@@ -1,7 +1,7 @@
 <div align="center" style="padding: 20px 0; margin: 10px 0;">
   <div style="position: relative; display: inline-block;">
     <a href="https://github.com/adadarsh23">
-      <img src="https://avatars.githubusercontent.com/u/157941812?s=400&u=2265f47f32579a8da4ab64976cc0e5300a8744a6&v=4" 
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHltbG1obzl5cGlnYnNmbDVqeXd1c29uNHo2cGg5MXZmZmRiNXhncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/8BDQnNDcocWSnHZLPB/giphy.gif" 
            alt="Ad Adarsh" 
            width="200"
            style="border-radius: 50%; border: 4px solid #ffffff; 
@@ -12,7 +12,11 @@
   </div>
 </div>
 
-<h3 align="center">👋 Hey there, I’m Âd Adarsh</h3>
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" alt="\👋" width="28" style="vertical-align: \middle; margin-right: \6px;" />
+  Hey there, I’m Âd Adarsh
+</h3>
+
 
 <!-- Enhanced Typing Effect with responsive container -->
 <div align="center" style="margin: 20px 0; padding: 0 20px;">
@@ -34,18 +38,19 @@
   </p>
 </div>
 
-
 ---
 
 ## 🚀 Tech Stack
 
 ### Languages
+
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=000)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 
 ### Frontend
+
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=000)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwind-css&logoColor=white)
@@ -54,12 +59,14 @@
 ![shadcn/ui](https://img.shields.io/badge/shadcn/ui-111827?style=flat)
 
 ### Backend
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=flat&logoColor=white)
 
 ### Tools & Platforms
+
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 ![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=flat&logo=yarn&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
@@ -67,6 +74,7 @@
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 
 ### Deployment & CI/CD
+
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white)
@@ -75,75 +83,82 @@
 ---
 
 ## 🎨 Frontend Projects
+
 <details>
   <summary>📌 Preview</summary>
 
-| Project           | Description                                | Live Demo                                   | Code                                                  |
-|------------------|--------------------------------------------|---------------------------------------------|--------------------------------------------------------|
-| **Photo Gallery**| View, search, and share beautiful images.  | [Live](https://photogallery99.netlify.app/) | [GitHub](https://github.com/adadarsh23/Photo-Gallery) |
-| **All-In-One Visitor Info**|  Device details to your network and location.| [Live](https://adadarsh23.github.io/All-Info-/)| [GitHub](https://github.com/adadarsh23/All-Info-) |
-| **Text App**     | Feature-rich online text editor.           | [Live](https://textapp23.netlify.app/)      | [GitHub](https://github.com/adadarsh23/Text-App-)     |
-| **Dashboard**    | Real-time analytics and live widgets.      | [Live](https://ninenine99.netlify.app/)     | [GitHub](https://github.com/adadarsh23/NineNine)      |
-| **Json-Visualizer**    | Visualizing JSON data with charts and tables. | [Live](https://jsonvisualize.netlify.app/)     | [GitHub](https://github.com/adadarsh23/Json-Visualizer)      |
-| **QR Code Generator**    | Generate custom QR codes for URLs, text, and phone numbers | [Live](https://qrcodead.netlify.app/)     | [GitHub](https://github.com/adadarsh23/OR-Code)      |
-| **SpeedTest**    | Internet speed test with ping and latency. | [Live](https://speedtest23.netlify.app/)    | [GitHub](https://github.com/adadarsh23/SpeedTest)     |
-| **Book**         | List of the Book.                          | [Live](https://adadarsh23.github.io/Book-Project/)| [GitHub](https://github.com/adadarsh23/Book-Project) |
-| **SachNews**     | Live world headlines from public APIs.     | [Live](https://sachnews.netlify.app/)       | [GitHub](https://github.com/adadarsh23/SachNews)      |
+| Project                     | Description                                                | Live Demo                                          | Code                                                    |
+| --------------------------- | ---------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------- |
+| **Photo Gallery**           | View, search, and share beautiful images.                  | [Live](https://photogallery99.netlify.app/)        | [GitHub](https://github.com/adadarsh23/Photo-Gallery)   |
+| **Music Website**           | Welcome to My Profile — Music Producer                     | [Live](https://adadarsh23.netlify.app/)            | [GitHub](https://github.com/adadarsh23/Profile-Website) |
+| **All-In-One Visitor Info** | Device details to your network and location.               | [Live](https://adadarsh23.github.io/All-Info-/)    | [GitHub](https://github.com/adadarsh23/All-Info-)       |
+| **Text App**                | Feature-rich online text editor.                           | [Live](https://textapp23.netlify.app/)             | [GitHub](https://github.com/adadarsh23/Text-App-)       |
+| **Dashboard**               | Real-time analytics and live widgets.                      | [Live](https://ninenine99.netlify.app/)            | [GitHub](https://github.com/adadarsh23/NineNine)        |
+| **Json-Visualizer**         | Visualizing JSON data with charts and tables.              | [Live](https://jsonvisualize.netlify.app/)         | [GitHub](https://github.com/adadarsh23/Json-Visualizer) |
+| **QR Code Generator**       | Generate custom QR codes for URLs, text, and phone numbers | [Live](https://qrcodead.netlify.app/)              | [GitHub](https://github.com/adadarsh23/OR-Code)         |
+| **SpeedTest**               | Internet speed test with ping and latency.                 | [Live](https://speedtest23.netlify.app/)           | [GitHub](https://github.com/adadarsh23/SpeedTest)       |
+| **Book**                    | List of the Book.                                          | [Live](https://adadarsh23.github.io/Book-Project/) | [GitHub](https://github.com/adadarsh23/Book-Project)    |
+| **SachNews**                | Live world headlines from public APIs.                     | [Live](https://sachnews.netlify.app/)              | [GitHub](https://github.com/adadarsh23/SachNews)        |
 
 </details>
 
 ---
 
 ## 🤖 AI & Model Projects
+
 <details>
   <summary>📌 Preview</summary>
 
-| Project    | Description                                        | Live                                       | GitHub                                           |
-|-----------|----------------------------------------------------|--------------------------------------------|--------------------------------------------------|
-| **AI Chat** | Chat with AI using text, image & real-time replies | [Live](https://ai-three-virid.vercel.app/) | [GitHub](https://github.com/adadarsh23/Ai)       |
-| **AI**     | Minimal chat UI with fast real-time AI replies     | [Live](https://aichat3.netlify.app/)       | [GitHub](https://github.com/adadarsh23/Ai-Chat)  |
+| Project          | Description                                                | Live                                          | GitHub                                               |
+| ---------------- | ---------------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------- |
+| **AI Assistent** | Hello! I’m your 🤖 AI Assistant. How can I help you today? | [Live](https://ai-assistance-ad.netlify.app/) | [GitHub](https://github.com/adadarsh23/AI-Assistant) |
+| **AI Chat**      | Chat with AI using text, image & real-time replies         | [Live](https://ai-three-virid.vercel.app/)    | [GitHub](https://github.com/adadarsh23/Ai)           |
+| **AI**           | Minimal chat UI with fast real-time AI replies             | [Live](https://aichat3.netlify.app/)          | [GitHub](https://github.com/adadarsh23/Ai-Chat)      |
 
 </details>
 
 ---
 
 ## 🖥️ Backend + Full Stack Projects
+
 <details>
   <summary>📌 Preview</summary>
 
-| Project             | Description                                            | Live Demo                                   | Code                                                     |
-|---------------------|--------------------------------------------------------|---------------------------------------------|----------------------------------------------------------|
-| **Grand Hotel**     | Comfort and charm in one stay.                         | [Live](https://grandhotel-ynab.onrender.com) | [GitHub](https://github.com/adadarsh23/Grand-Hotel-Mern) |
-| **OBRM**            | Billing automation and revenue tracking                | [Live](https://boardband23.web.app/)        | [GitHub](https://github.com/adadarsh23/OBRM)             |
-| **Satan**           | Secure and private chat app                            | [Live](https://satan-sable.vercel.app/)     | [GitHub](https://github.com/adadarsh23/Satan-)           |
-| **PhotoEnhance Ai** | PhotoEnhance Ai is a web-based image enhancement tool| [Live](https://enhance-photo-3tis.onrender.com/)   | [GitHub](https://github.com/adadarsh23/Enhance-Photo)          |
-| **Email Tool** | This simple tool allows you to send emails directly from your browser| [Live](https://email-tool-pm1t.onrender.com/)   | [GitHub](https://github.com/adadarsh23/Email-Tool)          |
-| **Latest Submissions** | Displays recent form data with Node.js & MongoDB   | [Live](https://mongodb-cr7r.onrender.com)   | [GitHub](https://github.com/adadarsh23/MongoDB)          |
+| Project                | Description                                                           | Live Demo                                        | Code                                                     |
+| ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------- |
+| **Grand Hotel**        | Comfort and charm in one stay.                                        | [Live](https://grandhotel-ynab.onrender.com)     | [GitHub](https://github.com/adadarsh23/Grand-Hotel-Mern) |
+| **OBRM**               | Billing automation and revenue tracking                               | [Live](https://boardband23.web.app/)             | [GitHub](https://github.com/adadarsh23/OBRM)             |
+| **Satan**              | Secure and private chat app                                           | [Live](https://satan-sable.vercel.app/)          | [GitHub](https://github.com/adadarsh23/Satan-)           |
+| **PhotoEnhance Ai**    | PhotoEnhance Ai is a web-based image enhancement tool                 | [Live](https://enhance-photo-3tis.onrender.com/) | [GitHub](https://github.com/adadarsh23/Enhance-Photo)    |
+| **Email Tool**         | This simple tool allows you to send emails directly from your browser | [Live](https://email-tool-pm1t.onrender.com/)    | [GitHub](https://github.com/adadarsh23/Email-Tool)       |
+| **Latest Submissions** | Displays recent form data with Node.js & MongoDB                      | [Live](https://mongodb-cr7r.onrender.com)        | [GitHub](https://github.com/adadarsh23/MongoDB)          |
 
 </details>
 
 ---
 
 ## 🧩 VS Code Extensions & Utilities
+
 <details>
   <summary>📌 Preview</summary>
 
-| Project                        | Description                     | GitHub Link                                                    |
-|-------------------------------|----------------------------------|----------------------------------------------------------------|
-| **Ghost Theme Extension v1.0.0** | A clean and modern custom VS Code theme extension | [GitHub](https://github.com/adadarsh23/ghost-theme) |
-| **Ai Artemis Extension v1.0.0** | AI-powered code generation assistant that runs locally | [GitHub](https://github.com/adadarsh23/AI-Artemis) |
+| Project                          | Description                                            | GitHub Link                                         |
+| -------------------------------- | ------------------------------------------------------ | --------------------------------------------------- |
+| **Ghost Theme Extension v1.0.0** | A clean and modern custom VS Code theme extension      | [GitHub](https://github.com/adadarsh23/ghost-theme) |
+| **Ai Artemis Extension v1.0.0**  | AI-powered code generation assistant that runs locally | [GitHub](https://github.com/adadarsh23/AI-Artemis)  |
 
 </details>
 
 ---
 
 ## 🧩 Browser Extensions & Utilities
+
 <details>
   <summary>📌 Preview</summary>
 
-| Project                                   | Description                                              | GitHub Link                                               | Download                                                                 |
-|-------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------|--------------------------------------------------------------------------|
-| **Analog Clock Extension v1.0.0** | See live time, weather, calendar updates and Count Time. | [GitHub](https://github.com/adadarsh23/Analog-Time) | [Download](https://github.com/adadarsh23/Analog-Time) |
+| Project                                   | Description                                              | GitHub Link                                                              | Download                                                                                     |
+| ----------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| **Analog Clock Extension v1.0.0**         | See live time, weather, calendar updates and Count Time. | [GitHub](https://github.com/adadarsh23/Analog-Time)                      | [Download](https://github.com/adadarsh23/Analog-Time)                                        |
 | **CapCut Premium Remover Extension v1.0** | Hide CapCut premium UI & watermark overlays              | [GitHub](https://github.com/adadarsh23/CapCut-Premium-Remover-Extension) | [Download](https://drive.google.com/uc?export=download&id=116K39iLZyOsXViwFqwdROPKfCRUqoWg2) |
 
 </details>
@@ -151,9 +166,11 @@
 ---
 
 ## 📊 GitHub Stats
+
 <div align="center" style="max-width: 100%;">
 
 <!-- Top Languages -->
+
 <img 
   src="https://github-readme-stats.vercel.app/api/top-langs/?username=adadarsh23&layout=compact&theme=aura&hide=" 
   alt="Top Languages" 
@@ -161,6 +178,7 @@
 />
 
 <!-- GitHub Stats -->
+
 <img 
   src="https://github-readme-stats.vercel.app/api?username=adadarsh23&show_icons=true&theme=aura&count_private=true" 
   alt="GitHub Stats" 
@@ -168,14 +186,20 @@
 />
 
 <!-- Streak Stats -->
+
 <img 
   src="https://github-readme-streak-stats.herokuapp.com?user=adadarsh23&theme=aura&hide_border=true" 
   alt="GitHub Streak" 
   style="max-width: 100%; height: auto; border: 2px solid #000000ff; border-radius: 10px; margin: 5px;" 
 />
 
+ <!-- Top Contributed Repo -->
+
+<img src="https://github-contributor-stats.vercel.app/api?username=adadarsh23&limit=5&theme=aura&hide_border=true&combine_all_yearly_contributions=true" alt="Top Contributed Repo" style="max-width: 100%; height: auto; border: 2px solid #000000ff; border-radius: 10px; margin: 5px;"
+ />
 
 <!-- Profile Summary Card -->
+
 <img 
   src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=adadarsh23&theme=aura" 
   alt="GitHub Profile Summary" 
@@ -222,11 +246,13 @@
   width="100%" 
   style="border: 2px solid #000000ff; border-radius: 10px; margin: 5px;" 
 />
+
 </div>
 
 ---
 
 ## 🤝 Let’s Connect
+
 <div align="center">
 
   <!-- 3D Social Icons -->
@@ -272,8 +298,8 @@
 
 ---
 
-
 ## ⭐ Star History Chart
+
 <p align="center">
   <a href="https://www.star-history.com/#adadarsh23/adadarsh23&Date">
     <img 
@@ -284,7 +310,17 @@
   </a>
 </p>
 
+---
 
+## ✨ Inspirational Dev Quotes
+
+<div align="center" style="margin: 20px 0;">
+  <img 
+    src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" 
+    alt="Inspirational Dev Quotes"
+    style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);" 
+  />
+</div>
 
 ---
 
